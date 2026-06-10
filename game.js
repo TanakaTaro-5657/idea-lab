@@ -4,6 +4,9 @@ const scenes = {
     choices: [
       { label: "ゲーム案に触れてみる", next: "touchIdea" },
       { label: "窓の外を確認する", next: "lookOutside" },
+      { label: "青い設計図を開く", next: "blueprintEnding" },
+      { label: "試作ロボットに話しかける", next: "robotEnding" },
+      { label: "屋上のアンテナを調整する", next: "antennaEnding" },
     ],
   },
   touchIdea: {
@@ -28,6 +31,24 @@ const scenes = {
   },
   freshStart: {
     text: "胸の奥に、次のプロトタイプの種が灯った。実験はまだ始まったばかりだ。",
+    choices: [
+      { label: "最初から遊ぶ", next: "start", restart: true },
+    ],
+  },
+  blueprintEnding: {
+    text: "青い設計図には、まだ誰も見たことのない街づくりゲームの全体像が描かれていた。あなたは迷わず最初の区画を塗り、共同制作の未来へ踏み出した。エンディング：設計図の街。",
+    choices: [
+      { label: "最初から遊ぶ", next: "start", restart: true },
+    ],
+  },
+  robotEnding: {
+    text: "試作ロボットは小さくうなずき、あなたのゲーム案に効果音と拍手を足してくれた。実験室は一人ではない開発チームになった。エンディング：相棒ロボット。",
+    choices: [
+      { label: "最初から遊ぶ", next: "start", restart: true },
+    ],
+  },
+  antennaEnding: {
+    text: "屋上のアンテナが朝焼けを受けて光り、遠くのプレイヤーから感想が届き始めた。小さな実験は世界へ配信された。エンディング：夜明けの発信。",
     choices: [
       { label: "最初から遊ぶ", next: "start", restart: true },
     ],
